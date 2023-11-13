@@ -1,0 +1,156 @@
+.panier{
+  height: 90vh;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.panier h1{
+ font-size: 3rem;
+ margin: 1rem 0rem 2rem 0rem;
+ height: 6%;
+}
+
+.panier button{
+  background-color: #FBB731;
+  border-color: #FBB731;
+  border-radius: 10px;
+}
+
+.conteneurProduits{
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+height: 50%;
+/* background-color: black; */
+}
+.listProduits{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.listProduits li{
+  display: grid;
+  grid-template-columns: 0.7fr 2fr 1fr 1fr 1fr 1fr 0.5fr;  
+  max-width: 100%;
+  grid-gap: 1rem;
+  align-items: center;
+}
+.grid-item{
+  margin: 10px;
+  align-items:center;
+  margin-right: auto;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.listProduits img{
+  max-width: 100%; 
+}
+.listProduits h2{
+  font-size: 1.2rem; 
+
+}
+.conteneurProduits button{
+  width: fit-content;
+  font-size: 1.2rem;
+  margin: 2px;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+
+
+
+.conteneurLivraisonAddition{
+  display: flex;
+  justify-content: space-between;
+  height: 44%;
+  margin-top: 1rem;
+}
+.livraison{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem 0.5rem 0rem;
+  width: 40%;
+
+}
+.livraison div{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #000;
+  border-radius: 10rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 15%;
+  padding: 8px;
+}
+
+.livraison div input{
+  border: none;
+  width: 70%;
+}
+.livraison div button{
+width: 30%;
+border: none;
+background-color: white;
+color: #FBB731;
+}
+.addition{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 30%;
+}
+.ligneColor{
+  border: 1px solid #FBB731;
+  margin: 10px 0;
+  width: 100%;
+}
+.addition div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.addition button{
+  width: 40%;
+  margin-left: auto;
+}
+
+.quantite-conteneur {
+  display: flex;
+  align-items: center;
+}
+
+.quantite-btn {
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.quantite-input {
+  width: 40px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0rem 0.3rem;
+}
+.suprimerProduit{
+  background-color: white;
+}
+.conteneurProduits::-webkit-scrollbar {
+  width: 12px; 
+}
+.conteneurProduits::-webkit-scrollbar-thumb {
+  background-color: #FBB731; 
+  border-radius: 6px; 
+}
+.conteneurProduits::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}

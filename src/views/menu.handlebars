@@ -1,0 +1,81 @@
+<script type="module" src="../../public/js/menu.js"></script>
+
+<div class="menuMain">
+
+    <div class="menu">
+      <h1>NOS PRODUITS</h1>
+      <ul class="produits">
+        
+        {{#each listProduits}}
+         <li id="{{this.produitId}}">
+          <div class="grid-item">
+          <img src="{{this.cheminImage}}" alt="{{this.nom}}" class="photo"> 
+          </div>
+          <div class="grid-item">{{this.nom}}</div>
+          <div class="grid-item">${{this.prix}}</div>
+          {{!-- en utilisant l'id du produit on creer l'id du button --}}
+          <div class="grid-item">
+          <button id="{{this.produitId}}_btn"class="acheterMenu" >Commandez</button>
+          </div>
+        </li> 
+        {{/each}}
+
+        
+
+
+       {{!-- <li>
+          <img src="public/img/Grilled Burger.png" alt="Grilled Burger" class="photo">
+          <p>Grilled Burger</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>
+        <li>
+          <img src="/public/img/DragonExpress.png" alt="Dragon Express" class="photo">
+          <p>Dragon Express</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>
+        
+        <li>
+          <img src="/public/img/Nando's.png" alt="Nando's" class="photo">
+          <p>Nando's</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>
+        <li>
+          <img src="/public/img/Meat Lovers.png" alt="Meat Lovers" class="photo">
+          <p>Meat Lovers</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>
+        <li>
+          <img src="public/img/Chicken Burger.png" alt="Chicken Burger" class="photo">
+          <p>Chicken Burger</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>
+        <li>
+          <img src="/public/img/Classic Smash.png" alt="Classic Smash" class="photo">
+          <p>Dragon Express</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>
+        
+        <li>
+          <img src="/public/img/Party Kit.png" alt="Party Kit" class="photo">
+          <p>"Party Kit</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>
+        <li>
+          <img src="/public/img/The Firehouse.png" alt="The Firehouse" class="photo">
+          <p>The Firehouse</p>
+          <p>$16</p>
+          <button class="acheterMenu">Commandez</button>
+        </li>--}}
+      </ul>
+
+    </div>
+
+</div>
+

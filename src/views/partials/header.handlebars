@@ -1,0 +1,33 @@
+<script type="module" src="../../public/js/header.js"></script>
+
+<header>
+    <nav class="nav_header">
+        <div class="burger_menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+        <div class="logo">
+            <img src="/public/img/logo.png" alt="LOGO">
+        </div>
+        <ul>
+            {{!-- {{#each list}} --}}
+            {{!-- <li>
+                <a href={{this.chemin}} class="{{#if this.active}}active{{/if}}">
+                {{this.str}}
+                </a>
+                </li> --}}
+            <li><a href="/" class="{{#if AccueilActive}}active{{/if}}">Accueil</a></li>
+            <li><a href="/menu" class="{{#if menuActive}}active{{/if}}">Menu</a></li>
+            <li><a href="/commande" class="{{#if commandeActive}}active{{/if}}">Commande</a></li>
+            <li><a href="/about" class="{{#if aboutActive}}active{{/if}}">About</a></li>
+            {{!-- {{/each}} --}}
+        </ul>
+        
+        <button>
+            <img src="../../public/img/sac-de-courses.png"></img>
+            <a href="/panier">Panier</a>
+        </button>
+
+    </nav>
+</header>

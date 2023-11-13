@@ -1,0 +1,170 @@
+<div class="panier"> 
+    <h1>Panier</h1>
+    <div class="conteneurProduits">
+      <ul class="listProduits">
+         <li>
+          <h2 class="grid-item" >
+          Produits
+          </h2>
+          <h2 class="grid-item">nom</h2>
+          <h2 class="grid-item">prix</h2>      
+          <h2 class="grid-item">quantite</h2>
+          <h2 class="grid-item">Total</h2>   
+        </li>
+        {{#each panierProduits}}
+        <li>
+          <div class="grid-item" >
+          <img src="{{this.produit.cheminImage}}" alt="{{this.produit.nom}}" class="photo"> 
+          </div>
+          <div class="grid-item">{{this.produit.nom}}</div>
+          <div class="grid-item">${{this.produit.prix}}</div>
+          
+          <div class="grid-item quantite-conteneur">
+          <button class="quantite-btn" id="moinsBtn_{{this.produit.produitId}}">-</button>
+          <input type="text" class="quantite-input" id="quantite_{{this.produit.produitId}}" value={{this.quantite}}>
+          <button class="quantite-btn" id="plusBtn_{{this.produit.produitId}}">+</button>
+          </div>
+          
+      
+          <div class="grid-item">$30!</div>
+        
+          <div class="grid-item">
+            <button class="miseAjour" id="miseAJour_{{this.produit.produitId}}">Mise a jour</button>
+          </div>  
+          <div class="grid-item">
+            <button class="suprimerProduit" id="supProduit_{{this.produit.produitId}}">X</button>
+          </div>
+        </li>
+        {{/each}}
+{{!--        
+        <li>
+          <div class="grid-item" >
+          <img src="../public/img/ChickenBurger.png" alt="Grilled Burger" >
+          </div>
+          <div class="grid-item">Grilled Burger</div>
+          <div class="grid-item">prix</div>
+        
+          <div class="grid-item">quantite</div>
+          <div class="grid-item">Total</div>
+          <div class="grid-item">
+            <button>Mise a jour</button>
+          </div>  
+          <div class="grid-item">X</div>
+        </li>
+        <li>
+          <div class="photo grid-item" >
+          <img src="../public/img/ChickenBurger.png" alt="Grilled Burger" >
+          </div>
+          <div class="grid-item">Grilled Burger</div>
+          <div class="grid-item">prix</div>
+        
+          <div class="grid-item">quantite</div>
+          <div class="grid-item">Total</div>
+          <div class="grid-item">
+            <button>Mise a jour</button>
+          </div>  
+          <div class="grid-item">X</div>
+        </li>
+        <li>
+          <div class="photo grid-item" >
+          <img src="../public/img/ChickenBurger.png" alt="Grilled Burger" >
+          </div>
+          <div class="grid-item">Grilled Burger</div>
+          <div class="grid-item">prix</div>
+        
+          <div class="grid-item">quantite</div>
+          <div class="grid-item">Total</div>
+          <div class="grid-item">
+            <button>Mise a jour</button>
+          </div>  
+          <div class="grid-item">X</div>
+        </li>
+        <li>
+          <div class="photo grid-item" >
+          <img src="../public/img/ChickenBurger.png" alt="Grilled Burger" >
+          </div>
+          <div class="grid-item">Grilled Burger</div>
+          <div class="grid-item">prix</div>
+        
+          <div class="grid-item">quantite</div>
+          <div class="grid-item">Total</div>
+          <div class="grid-item">
+            <button>Mise a jour</button>
+          </div>  
+          <div class="grid-item">X</div>
+        </li>
+        <li>
+          <div class="photo grid-item" >
+          <img src="../public/img/ChickenBurger.png" alt="Grilled Burger" >
+          </div>
+          <div class="grid-item">Grilled Burger</div>
+          <div class="grid-item">prix</div>
+        
+          <div class="grid-item">quantite</div>
+          <div class="grid-item">Total</div>
+          <div class="grid-item">
+            <button>Mise a jour</button>
+          </div>  
+          <div class="grid-item">X</div>
+        </li>
+        <li>
+          <div class="photo grid-item" >
+          <img src="../public/img/ChickenBurger.png" alt="Grilled Burger" >
+          </div>
+          <div class="grid-item">Grilled Burger</div>
+          <div class="grid-item">prix</div>
+        
+          <div class="grid-item">quantite</div>
+          <div class="grid-item">Total</div>
+          <div class="grid-item">
+            <button>Mise a jour</button>
+          </div>  
+          <div class="grid-item">X</div>
+        </li>
+        <li>
+          <div class="photo grid-item" >
+          <img src="../public/img/ChickenBurger.png" alt="Grilled Burger" >
+          </div>
+          <div class="grid-item">Grilled Burger</div>
+          <div class="grid-item">prix</div>
+        
+          <div class="grid-item">quantite</div>
+          <div class="grid-item">Total</div>
+          <div class="grid-item">
+            <button>Mise a jour</button>
+          </div>  
+          <div class="grid-item">X</div>
+        </li> --}}
+        
+      </ul>
+      <button id="effacerPanierBtn">EFFACER PANIER</button>
+    </div>
+   
+  <div class="conteneurLivraisonAddition">
+    <div class="livraison">
+      <label for="Livraison"> LIVRAISON </label>
+      <div>
+      <input type="text" name="livraison" placeholder="Entez votre adresse" />
+      <button>SOUMETTRE</button>
+      </div>
+    </div>
+
+    <div class="addition">
+      <hr class="ligneColor">
+      <div>
+      <p>Addition</p>
+      <P>$30</P>
+      </div>
+      <div>
+      <p>Livraison</p>
+      <P>$0</P>
+      </div>
+      <div>
+      <p>Total</p>
+      <P class="total">$30</P>
+      </div>
+      <button>payez</button>
+    </div>
+  </div>
+</div>
+
